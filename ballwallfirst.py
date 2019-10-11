@@ -76,7 +76,10 @@ while t < 3:
     varr.axis = vscale*(ball.p/ball.mass)
     t = t + dt
     # Grab every 10 frames
+    saveimg = False
     if fnum >= 200:
+        break
+    elif not saveimg:
         break
     elif (fnum % 20 == 0):
         im = ImageGrab.grab((sceneleft, scenetop, sceneleft + 1200, scenetop + 780))  # screen box from (0,0)-(500,500)
